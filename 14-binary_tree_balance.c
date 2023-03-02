@@ -35,6 +35,8 @@ int binary_tree_heights(const binary_tree_t *tree)
 	left_height += binary_tree_heights(tree->left);
 	right_height += binary_tree_heights(tree->right);
 
+	printf("Parent: %d, Left: %d, Right: %d\n", tree->n, left_height, right_height);
+
 	if (left_height > right_height)
 		return (left_height);
 	else
